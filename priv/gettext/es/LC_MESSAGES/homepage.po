@@ -1,0 +1,67 @@
+## "msgid"s in this file come from POT (.pot) files.
+###
+### Do not add, change, or remove "msgid"s manually here as
+### they're tied to the ones in the corresponding POT file
+### (with the same domain).
+###
+### Use "mix gettext.extract --merge" or "mix gettext.merge"
+### to merge POT files into PO files.
+msgid ""
+msgstr ""
+"Language: es\n"
+"Plural-Forms: nplurals=2\n"
+
+#: lib/kanta_test_web/controllers/page_html/home.html.heex:87
+#, elixir-autogen, elixir-format
+msgid "Build rich, interactive web applications quickly, with less code and fewer moving parts. Join our growing community of developers using Phoenix to craft APIs, HTML5 apps and more, for fun or at scale."
+msgstr "Construya aplicaciones web ricas e interactivas rápidamente, con menos código y menos partes móviles. Únase a nuestra creciente comunidad de desarrolladores que utilizan Phoenix para crear API, aplicaciones HTML5 y mucho más, por diversión o a gran escala."
+
+#: lib/kanta_test_web/controllers/page_html/home.html.heex:160
+#, elixir-autogen, elixir-format
+msgid "Changelog"
+msgstr ""
+
+#: lib/kanta_test_web/controllers/page_html/home.html.heex:231
+#, elixir-autogen, elixir-format
+msgid "Chat on Libera IRC"
+msgstr ""
+
+#: lib/kanta_test_web/controllers/page_html/home.html.heex:261
+#, elixir-autogen, elixir-format
+msgid "Deploy your application"
+msgstr ""
+
+#: lib/kanta_test_web/controllers/page_html/home.html.heex:192
+#, elixir-autogen, elixir-format
+msgid "Discuss on the Elixir forum"
+msgstr ""
+
+#: lib/kanta_test_web/controllers/page_html/home.html.heex:112
+#, elixir-autogen, elixir-format
+msgid "Docs"
+msgstr ""
+
+#: lib/kanta_test_web/controllers/page_html/home.html.heex:112
+#, elixir-autogen, elixir-format
+msgid "Guides"
+msgstr ""
+
+#: lib/kanta_test_web/controllers/page_html/home.html.heex:246
+#, elixir-autogen, elixir-format
+msgid "Join our Discord server"
+msgstr ""
+
+#: lib/kanta_test_web/controllers/page_html/home.html.heex:207
+#, elixir-autogen, elixir-format
+msgid "Join our Slack channel"
+msgstr ""
+
+#: lib/kanta_test_web/controllers/page_html/home.html.heex:130
+#, elixir-autogen, elixir-format
+msgid "Source Code"
+msgstr ""
+
+#: lib/kanta_test_web/controllers/page_html/home.html.heex:84
+#, elixir-autogen, elixir-format
+msgid "Peace of mind from prototype to production."
+msgstr "Tranquilidad desde el prototipo hasta la producción."

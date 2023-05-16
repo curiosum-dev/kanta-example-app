@@ -12,14 +12,10 @@ defmodule KantaTest.Application do
       KantaTestWeb.Telemetry,
       # Start the Ecto repository
       KantaTest.Repo,
-      # Start the PubSub system
       {Phoenix.PubSub, name: KantaTest.PubSub},
-      # Start Finch
       {Finch, name: KantaTest.Finch},
-      # Start the Endpoint (http/https)
-      KantaTestWeb.Endpoint
-      # Start a worker by calling: KantaTest.Worker.start_link(arg)
-      # {KantaTest.Worker, arg}
+      KantaTestWeb.Endpoint,
+      {Kanta, Application.fetch_env!(:kanta_test, Kanta)}
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html

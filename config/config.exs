@@ -10,6 +10,10 @@ import Config
 config :kanta_test,
   ecto_repos: [KantaTest.Repo]
 
+config :kanta_test, KantaTest.Gettext,
+  default_locale: "en",
+  locales: ~w(en fr ru es it lt)
+
 # Configures the endpoint
 config :kanta_test, KantaTestWeb.Endpoint,
   url: [host: "localhost"],
@@ -59,10 +63,13 @@ config :logger, :console,
 # Use Jason for JSON parsing in Phoenix
 config :phoenix, :json_library, Jason
 
-config :kanta,
+config :kanta_test, Kanta,
   endpoint: KantaTestWeb.Endpoint,
-  ecto_repo: KantaTest.Repo,
-  project_root: File.cwd!()
+  repo: KantaTest.Repo,
+  project_root: File.cwd!(),
+  plugins: [
+    {Kanta.Plugins.DeepL, api_key: System.get_env("DEEPL_API_KEY")}
+  ]
 
 # Import environment specific config. This must remain at the bottom
 # of this file so it overrides the configuration defined above.

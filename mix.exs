@@ -19,7 +19,7 @@ defmodule KantaTest.MixProject do
   def application do
     [
       mod: {KantaTest.Application, []},
-      extra_applications: [:logger, :runtime_tools]
+      extra_applications: [:set_locale, :logger, :runtime_tools]
     ]
   end
 
@@ -45,15 +45,17 @@ defmodule KantaTest.MixProject do
       {:esbuild, "~> 0.5", runtime: Mix.env() == :dev},
       {:tailwind, "~> 0.1.8", runtime: Mix.env() == :dev},
       {:swoosh, "~> 1.3"},
-      {:finch, "~> 0.13"},
+      {:finch, "~> 0.15"},
       {:telemetry_metrics, "~> 0.6"},
       {:telemetry_poller, "~> 1.0"},
-      {:gettext, git: "git@github.com:bamorim/gettext.git", branch: "runtime-gettext"},
+      {:gettext,
+       git: "git@github.com:bamorim/gettext.git", branch: "runtime-gettext", override: true},
       {:jason, "~> 1.2"},
       {:plug_cowboy, "~> 2.5"},
 
       # KANTA
-      {:kanta, path: "../kanta"}
+      {:kanta, "~> 0.1.0"},
+      {:set_locale, "~> 0.2.1"}
     ]
   end
 

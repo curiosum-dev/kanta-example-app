@@ -2,10 +2,10 @@ defmodule KantaTest.Repo.Migrations.AddKantaTranslationsTable do
   use Ecto.Migration
 
   def up do
-    Kanta.Migrations.up()
+    Kanta.Migration.up(version: 1)
   end
 
   def down do
-    Kanta.Migrations.down()
+    Kanta.Migration.down(version: 1)
   end
 end

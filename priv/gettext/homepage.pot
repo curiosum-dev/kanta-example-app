@@ -1,0 +1,67 @@
+## This file is a PO Template file.
+##
+## "msgid"s here are often extracted from source code.
+## Add new messages manually only if they're dynamic
+## messages that can't be statically extracted.
+##
+## Run "mix gettext.extract" to bring this file up to
+## date. Leave "msgstr"s empty as changing them here has no
+## effect: edit them in PO (.po) files instead.
+#
+msgid ""
+msgstr ""
+
+#: lib/kanta_test_web/controllers/page_html/home.html.heex:90
+#, elixir-autogen, elixir-format
+msgid "Build rich, interactive web applications quickly, with less code and fewer moving parts. Join our growing community of developers using Phoenix to craft APIs, HTML5 apps and more, for fun or at scale."
+msgstr ""
+
+#: lib/kanta_test_web/controllers/page_html/home.html.heex:163
+#, elixir-autogen, elixir-format
+msgid "Changelog"
+msgstr ""
+
+#: lib/kanta_test_web/controllers/page_html/home.html.heex:234
+#, elixir-autogen, elixir-format
+msgid "Chat on Libera IRC"
+msgstr ""
+
+#: lib/kanta_test_web/controllers/page_html/home.html.heex:264
+#, elixir-autogen, elixir-format
+msgid "Deploy your application"
+msgstr ""
+
+#: lib/kanta_test_web/controllers/page_html/home.html.heex:195
+#, elixir-autogen, elixir-format
+msgid "Discuss on the Elixir forum"
+msgstr ""
+
+#: lib/kanta_test_web/controllers/page_html/home.html.heex:115
+#, elixir-autogen, elixir-format
+msgid "Docs"
+msgstr ""
+
+#: lib/kanta_test_web/controllers/page_html/home.html.heex:115
+#, elixir-autogen, elixir-format
+msgid "Guides"
+msgstr ""
+
+#: lib/kanta_test_web/controllers/page_html/home.html.heex:249
+#, elixir-autogen, elixir-format
+msgid "Join our Discord server"
+msgstr ""
+
+#: lib/kanta_test_web/controllers/page_html/home.html.heex:210
+#, elixir-autogen, elixir-format
+msgid "Join our Slack channel"
+msgstr ""
+
+#: lib/kanta_test_web/controllers/page_html/home.html.heex:133
+#, elixir-autogen, elixir-format
+msgid "Source Code"
+msgstr ""
+
+#: lib/kanta_test_web/controllers/page_html/home.html.heex:87
+#, elixir-autogen, elixir-format
+msgid "Peace of mind from prototype to production."
+msgstr ""

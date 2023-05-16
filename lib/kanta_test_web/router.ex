@@ -12,6 +12,14 @@ defmodule KantaTestWeb.Router do
     plug :put_secure_browser_headers
   end
 
+  pipeline :localized do
+    plug(SetLocale,
+      gettext: KantaTestWeb.Gettext,
+      default_locale: "en",
+      cookie_key: "project_locale"
+    )
+  end
+
   pipeline :api do
     plug :accepts, ["json"]
   end
@@ -19,7 +27,13 @@ defmodule KantaTestWeb.Router do
   scope "/", KantaTestWeb do
     pipe_through :browser
 
-    kanta_dashboard "/kanta"
+    kanta_dashboard("/kanta")
+    get "/", PageController, :home
+  end
+
+  scope "/:locale", KantaTestWeb do
+    pipe_through([:browser, :localized])
+
     get "/", PageController, :home
   end
 
