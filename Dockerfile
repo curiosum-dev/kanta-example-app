@@ -18,12 +18,13 @@ ARG DEBIAN_VERSION=bullseye-20230109-slim
 ARG BUILDER_IMAGE="hexpm/elixir:${ELIXIR_VERSION}-erlang-${OTP_VERSION}-debian-${DEBIAN_VERSION}"
 ARG RUNNER_IMAGE="debian:${DEBIAN_VERSION}"
 
+FROM ${BUILDER_IMAGE} as builder
+
 ARG DATABASE_URL
 ARG DATABASE_HOST
 ARG DATABASE_PORT
 ARG DEEPL_API_KEY
-
-FROM ${BUILDER_IMAGE} as builder
+ARG SSH_PRIVATE_KEY
 
 # install build dependencies
 RUN apt-get update -y && apt-get install -y build-essential git \
@@ -42,9 +43,16 @@ ENV DATABASE_URL=${DATABASE_URL}
 ENV DATABASE_HOST=${DATABASE_HOST}
 ENV DATABASE_PORT=${DATABASE_PORT}
 ENV DEEPL_API_KEY=${DEEPL_API_KEY}
+ENV SSH_PRIVATE_KEY=${SSH_PRIVATE_KEY}
+
 
 # install mix dependencies
 COPY mix.exs mix.lock ./
+RUN mkdir ~/.ssh/
+RUN echo "${SSH_PRIVATE_KEY}" > ~/.ssh/id_ed25519
+RUN chmod 600 ~/.ssh/id_ed25519
+RUN ssh-keyscan github.com >> ~/.ssh/known_hosts
+RUN echo "${SSH_PRIVATE_KEY}"
 RUN mix deps.get --only $MIX_ENV
 RUN mkdir config
 
@@ -75,6 +83,11 @@ RUN mix release
 # start a new build stage so that the final image will only contain
 # the compiled release and other runtime necessities
 FROM ${RUNNER_IMAGE}
+
+ARG DATABASE_URL
+ARG DATABASE_HOST
+ARG DATABASE_PORT
+ARG DEEPL_API_KEY
 
 RUN apt-get update -y && apt-get install -y libstdc++6 openssl libncurses5 locales \
   && apt-get clean && rm -f /var/lib/apt/lists/*_*

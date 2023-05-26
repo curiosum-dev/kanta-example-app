@@ -4,7 +4,7 @@ defmodule KantaTest.MixProject do
   def project do
     [
       app: :kanta_test,
-      version: "0.1.0",
+      version: "0.1.3",
       elixir: "~> 1.14",
       elixirc_paths: elixirc_paths(Mix.env()),
       start_permanent: Mix.env() == :prod,
@@ -43,9 +43,9 @@ defmodule KantaTest.MixProject do
       {:floki, ">= 0.30.0", only: :test},
       {:phoenix_live_dashboard, "~> 0.7.2"},
       {:esbuild, "~> 0.5", runtime: Mix.env() == :dev},
-      {:tailwind, "~> 0.1.8", runtime: Mix.env() == :dev},
+      {:tailwind, "~> 0.2", runtime: Mix.env() == :dev},
       {:swoosh, "~> 1.3"},
-      {:finch, "~> 0.15"},
+      {:finch, "~> 0.16"},
       {:telemetry_metrics, "~> 0.6"},
       {:telemetry_poller, "~> 1.0"},
       {:gettext,
@@ -54,7 +54,8 @@ defmodule KantaTest.MixProject do
       {:plug_cowboy, "~> 2.5"},
 
       # KANTA
-      {:kanta, "~> 0.1.0"},
+      {:kanta, "~> 0.1.3"},
+      {:kanta_deep_l_plugin, "~> 0.1.0"},
       {:set_locale, "~> 0.2.1"}
     ]
   end

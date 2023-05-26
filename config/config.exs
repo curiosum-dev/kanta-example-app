@@ -16,7 +16,7 @@ config :kanta_test, KantaTest.Gettext,
 
 # Configures the endpoint
 config :kanta_test, KantaTestWeb.Endpoint,
-  url: [host: "localhost"],
+  url: [host: "kanta.munasoft.pl"],
   render_errors: [
     formats: [html: KantaTestWeb.ErrorHTML, json: KantaTestWeb.ErrorJSON],
     layout: false
@@ -66,9 +66,9 @@ config :phoenix, :json_library, Jason
 config :kanta_test, Kanta,
   endpoint: KantaTestWeb.Endpoint,
   repo: KantaTest.Repo,
-  project_root: File.cwd!(),
+  otp_name: :kanta_test,
   plugins: [
-    {Kanta.Plugins.DeepL, api_key: System.get_env("DEEPL_API_KEY")}
+    {Kanta.DeepL.Plugin, api_key: System.get_env("DEEPL_API_KEY")}
   ]
 
 # Import environment specific config. This must remain at the bottom

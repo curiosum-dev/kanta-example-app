@@ -28,7 +28,7 @@ config :kanta_test, KantaTestWeb.Endpoint,
     esbuild: {Esbuild, :install_and_run, [:default, ~w(--sourcemap=inline --watch)]},
     tailwind: {Tailwind, :install_and_run, [:default, ~w(--watch)]}
   ],
-  reloadable_apps: [:kanta]
+  reloadable_apps: [:kanta, :kanta_deep_l_plugin]
 
 # ## SSL Support
 #
