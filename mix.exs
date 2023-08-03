@@ -48,8 +48,7 @@ defmodule KantaTest.MixProject do
       {:finch, "~> 0.16"},
       {:telemetry_metrics, "~> 0.6"},
       {:telemetry_poller, "~> 1.0"},
-      {:gettext,
-       git: "git@github.com:bamorim/gettext.git", branch: "runtime-gettext", override: true},
+      {:gettext, github: "bamorim/gettext", branch: "runtime-gettext", override: true},
       {:jason, "~> 1.2"},
       {:plug_cowboy, "~> 2.5"},
 
