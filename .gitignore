@@ -36,3 +36,15 @@ npm-debug.log
 /assets/node_modules/
 
 .env
+# Devenv
+.devenv*
+devenv.local.nix
+
+# direnv
+.direnv
+
+# pre-commit
+.pre-commit-config.yaml
+
+.nix-hex
+.nix-mix
