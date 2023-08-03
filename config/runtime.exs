@@ -63,11 +63,4 @@ if config_env() == :prod do
     ],
     secret_key_base: secret_key_base
 
-  config :kanta_test, Kanta,
-    endpoint: KantaTestWeb.Endpoint,
-    repo: KantaTest.Repo,
-    otp_name: :kanta_test,
-    plugins: [
-      {Kanta.DeepL.Plugin, api_key: System.get_env("DEEPL_API_KEY")}
-    ]
 end

@@ -63,13 +63,16 @@ config :logger, :console,
 # Use Jason for JSON parsing in Phoenix
 config :phoenix, :json_library, Jason
 
+deepl_api_key = System.get_env("DEEPL_API_KEY")
+deepl_plugin = deepl_api_key && {Kanta.DeepL.Plugin, api_key: deepl_api_key}
+po_writer_plugin = {Kanta.POWriter.Plugin, []}
+kanta_plugins = Enum.filter([deepl_plugin, po_writer_plugin], &(!is_nil(&1)))
+
 config :kanta_test, Kanta,
   endpoint: KantaTestWeb.Endpoint,
   repo: KantaTest.Repo,
   otp_name: :kanta_test,
-  plugins: [
-    {Kanta.DeepL.Plugin, api_key: System.get_env("DEEPL_API_KEY")}
-  ]
+  plugins: kanta_plugins
 
 # Import environment specific config. This must remain at the bottom
 # of this file so it overrides the configuration defined above.

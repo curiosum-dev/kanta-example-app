@@ -5,7 +5,7 @@ defmodule KantaTest.MixProject do
     [
       app: :kanta_test,
       version: "0.1.3",
-      elixir: "~> 1.14",
+      elixir: ">= 1.14.0",
       elixirc_paths: elixirc_paths(Mix.env()),
       start_permanent: Mix.env() == :prod,
       aliases: aliases(),
@@ -56,6 +56,7 @@ defmodule KantaTest.MixProject do
       # KANTA
       {:kanta, "~> 0.1.3"},
       {:kanta_deep_l_plugin, "~> 0.1.0"},
+      {:kanta_po_writer_plugin, path: "../kanta_po_writer_plugin"},
       {:set_locale, "~> 0.2.1"}
     ]
   end
