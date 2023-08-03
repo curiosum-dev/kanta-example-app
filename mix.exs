@@ -53,7 +53,7 @@ defmodule KantaTest.MixProject do
       {:plug_cowboy, "~> 2.5"},
 
       # KANTA
-      {:kanta, "~> 0.1.3"},
+      {:kanta, github: "curiosum-dev/kanta", branch: "develop", override: true},
       {:kanta_deep_l_plugin, "~> 0.1.0"},
       {:kanta_po_writer_plugin, path: "../kanta_po_writer_plugin"},
       {:set_locale, "~> 0.2.1"}
