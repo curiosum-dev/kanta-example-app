@@ -48,7 +48,7 @@ if config_env() == :prod do
       You can generate one by calling: mix phx.gen.secret
       """
 
-  host = System.get_env("PHX_HOST") || "kanta.munasoft.pl"
+  host = System.get_env("PHX_HOST") || "kanta.curiosum.dev"
   port = String.to_integer(System.get_env("PORT") || "4000")
 
   config :kanta_test, KantaTestWeb.Endpoint,
