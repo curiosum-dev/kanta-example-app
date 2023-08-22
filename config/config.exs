@@ -16,7 +16,7 @@ config :kanta_test, KantaTest.Gettext,
 
 # Configures the endpoint
 config :kanta_test, KantaTestWeb.Endpoint,
-  url: [host: "kanta.munasoft.pl"],
+  url: [host: "kanta.curiosum.com"],
   render_errors: [
     formats: [html: KantaTestWeb.ErrorHTML, json: KantaTestWeb.ErrorJSON],
     layout: false
