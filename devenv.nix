@@ -21,7 +21,7 @@ in {
     export PATH=$PATH:$(pwd)/_build/pip_packages/bin
   '';
 
-  packages = [nodejs elixir-ls];
+  packages = [nodejs elixir-ls] ++ lib.optionals pkgs.stdenv.isLinux [pkgs.inotify-tools];
 
   languages.elixir = {
     enable = true;
