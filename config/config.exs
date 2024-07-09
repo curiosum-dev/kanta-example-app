@@ -67,9 +67,7 @@ config :kanta_test, Kanta,
   endpoint: KantaTestWeb.Endpoint,
   repo: KantaTest.Repo,
   otp_name: :kanta_test,
-  plugins: [
-    {Kanta.DeepL.Plugin, api_key: System.get_env("DEEPL_API_KEY")}
-  ]
+  plugins: []
 
 # Import environment specific config. This must remain at the bottom
 # of this file so it overrides the configuration defined above.
