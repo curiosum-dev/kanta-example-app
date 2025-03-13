@@ -6,6 +6,6 @@ defmodule KantaTest.Repo.Migrations.AddKantaTranslationsTable do
   end
 
   def down do
-    Kanta.Migration.down(version: 2)
+    Kanta.Migration.down(version: 1)
   end
 end
