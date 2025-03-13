@@ -53,7 +53,6 @@ defmodule KantaTest.MixProject do
       {:plug_cowboy, "~> 2.5"},
 
       # KANTA
-      # "~> 0.4.1"},
       {:kanta, path: "../kanta", override: true},
       {:kanta_deep_l_plugin, "~> 0.1.1"},
       {:set_locale, "~> 0.2.1"}
