@@ -69,8 +69,12 @@ if config_env() in [:prod, :dev] do
     endpoint: KantaTestWeb.Endpoint,
     repo: KantaTest.Repo,
     otp_name: :kanta_test,
-    plugins: 
-    [
-      # plugins that don't require additonal config and can be enabled by default go here
-    ] ++ if key = System.get_env("DEEPL_API_KEY"), do: {Kanta.DeepL.Plugin, api_key: key}, else: []
+    plugins:
+      [
+        # plugins that don't require additonal config and can be enabled by default go here
+      ] ++
+        if(key = System.get_env("DEEPL_API_KEY"),
+          do: {Kanta.DeepL.Plugin, api_key: key},
+          else: []
+        )
 end
