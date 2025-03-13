@@ -35,4 +35,19 @@ kanta_test-*.tar
 npm-debug.log
 /assets/node_modules/
 
-.env
+# Devenv
+.devenv*
+devenv.local.nix
+
+# direnv
+.direnv
+
+# pre-commit
+.pre-commit-config.yaml
+
+/.elixir_ls
+/.env
+/.nix-hex
+/.nix-mix
+/.elixir-tools
+/priv/repo/local_seed.exs
