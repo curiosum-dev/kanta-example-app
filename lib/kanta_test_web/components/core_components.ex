@@ -12,7 +12,7 @@ defmodule KantaTestWeb.CoreComponents do
   use Phoenix.Component
 
   alias Phoenix.LiveView.JS
-  use Kanta.Gettext, backend: KantaTestWeb.Gettext
+  import KantaTestWeb.Gettext
 
   @doc """
   Renders a modal.
@@ -79,7 +79,6 @@ defmodule KantaTestWeb.CoreComponents do
                   class="-m-3 flex-none p-3 opacity-20 hover:opacity-40"
                   aria-label={gettext("close")}
                 >
-                  <%= gettext("Testowe wywołanie") %>
                   <Heroicons.x_mark solid class="h-5 w-5 stroke-current" />
                 </button>
               </div>
