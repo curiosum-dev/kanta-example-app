@@ -9,7 +9,7 @@
 msgid ""
 msgstr ""
 "Language: pt\n"
-"Plural-Forms: nplurals=2\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);"
 
 #: lib/kanta_test_web/components/core_components.ex:490
 #, elixir-autogen, elixir-format
