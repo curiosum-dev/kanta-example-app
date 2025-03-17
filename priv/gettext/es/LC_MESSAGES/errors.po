@@ -9,7 +9,8 @@
 msgid ""
 msgstr ""
 "Language: es\n"
-"Plural-Forms: nplurals=2\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);"
+
 
 msgid "can't be blank"
 msgstr "no puede estar en blanco"
