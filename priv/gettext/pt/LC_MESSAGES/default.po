@@ -9,7 +9,6 @@
 msgid ""
 msgstr ""
 "Language: pt\n"
-"Plural-Forms: nplurals=2\n"
 
 #: lib/kanta_test_web/components/core_components.ex:490
 #, elixir-autogen, elixir-format

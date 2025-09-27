@@ -9,17 +9,16 @@
 msgid ""
 msgstr ""
 "Language: pt\n"
-"Plural-Forms: nplurals=2\n"
 
 #: lib/kanta_test_web/controllers/page_html/home.html.heex:90
 #, elixir-autogen, elixir-format
 msgid "Build rich, interactive web applications quickly, with less code and fewer moving parts. Join our growing community of developers using Phoenix to craft APIs, HTML5 apps and more, for fun or at scale."
-msgstr "Crie rapidamente aplicações Web ricas e interactivas, com menos código e menos partes móveis. Junte-se à nossa crescente comunidade de desenvolvedores que usam o Phoenix para criar APIs, aplicativos HTML5 e muito mais, por diversão ou em escala."
+msgstr ""
 
 #: lib/kanta_test_web/controllers/page_html/home.html.heex:163
 #, elixir-autogen, elixir-format
 msgid "Changelog"
-msgstr "Registo de alterações"
+msgstr ""
 
 #: lib/kanta_test_web/controllers/page_html/home.html.heex:234
 #, elixir-autogen, elixir-format
@@ -56,12 +55,12 @@ msgstr ""
 msgid "Join our Slack channel"
 msgstr ""
 
+#: lib/kanta_test_web/controllers/page_html/home.html.heex:87
+#, elixir-autogen, elixir-format
+msgid "Peace of mind from prototype to production."
+msgstr ""
+
 #: lib/kanta_test_web/controllers/page_html/home.html.heex:133
 #, elixir-autogen, elixir-format
 msgid "Source Code"
 msgstr ""
-
-#: lib/kanta_test_web/controllers/page_html/home.html.heex:87
-#, elixir-autogen, elixir-format
-msgid "Peace of mind from prototype to production."
-msgstr "Tranquilidade desde o protótipo até à produção."
