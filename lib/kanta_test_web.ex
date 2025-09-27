@@ -43,7 +43,7 @@ defmodule KantaTestWeb do
         layouts: [html: KantaTestWeb.Layouts]
 
       import Plug.Conn
-      import KantaTestWeb.Gettext
+      use Gettext, backend: KantaTestWeb.Gettext
 
       unquote(verified_routes())
     end
@@ -85,7 +85,7 @@ defmodule KantaTestWeb do
       import Phoenix.HTML
       # Core UI components and translation
       import KantaTestWeb.CoreComponents
-      import KantaTestWeb.Gettext
+      use Gettext, backend: KantaTestWeb.Gettext
 
       # Shortcut for generating JS commands
       alias Phoenix.LiveView.JS
