@@ -54,7 +54,9 @@ defmodule KantaTest.MixProject do
       # KANTA
       {:kanta, path: "../kanta", override: true},
       {:kanta_deep_l_plugin, "~> 0.1.1"},
-      {:set_locale, "~> 0.2.1"}
+      {:set_locale, "~> 0.2.1"},
+      {:tidewave, "~> 0.5", only: :dev},
+      {:live_debugger, "~> 0.4.0", only: :dev}
     ]
   end
 
