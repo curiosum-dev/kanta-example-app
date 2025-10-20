@@ -13,7 +13,7 @@ defmodule KantaTestWeb.Router do
   end
 
   pipeline :localized do
-    plug(SetLocale,
+    plug(KantaTestWeb.Plugs.SetLocale,
       gettext: KantaTestWeb.Gettext,
       default_locale: "en",
       cookie_key: "project_locale"

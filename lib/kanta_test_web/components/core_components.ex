@@ -12,7 +12,7 @@ defmodule KantaTestWeb.CoreComponents do
   use Phoenix.Component
 
   alias Phoenix.LiveView.JS
-  import KantaTestWeb.Gettext
+  use Gettext, backend: KantaTestWeb.Gettext
 
   @doc """
   Renders a modal.

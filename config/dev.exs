@@ -1,5 +1,7 @@
 import Config
 
+
+config :phoenix_live_view, debug_heex_annotations: true
 # Configure your database
 config :kanta_test, KantaTest.Repo,
   username: "postgres",

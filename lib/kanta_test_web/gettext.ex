@@ -20,5 +20,5 @@ defmodule KantaTestWeb.Gettext do
 
   See the [Gettext Docs](https://hexdocs.pm/gettext) for detailed usage.
   """
-  use Gettext, otp_app: :kanta_test, repo: Kanta.Gettext.Repo
+  use Kanta.Backend, otp_app: :kanta_test
 end

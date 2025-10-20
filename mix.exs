@@ -19,7 +19,7 @@ defmodule KantaTest.MixProject do
   def application do
     [
       mod: {KantaTest.Application, []},
-      extra_applications: [:set_locale, :logger, :runtime_tools]
+      extra_applications: [:logger, :runtime_tools]
     ]
   end
 
@@ -32,31 +32,31 @@ defmodule KantaTest.MixProject do
   # Type `mix help deps` for examples and options.
   defp deps do
     [
+      {:ecto_sql, "~> 3.6"},
+      {:esbuild, "~> 0.5", runtime: Mix.env() == :dev},
+      {:finch, "~> 0.16"},
+      {:floki, ">= 0.30.0", only: :test},
+      {:gettext, "~> 1.0"},
+      {:heroicons, "~> 0.5"},
+      {:jason, "~> 1.2"},
       {:phoenix, "~> 1.7.0"},
       {:phoenix_ecto, "~> 4.4"},
-      {:ecto_sql, "~> 3.6"},
-      {:postgrex, ">= 0.0.0"},
       {:phoenix_html, "~> 4.0"},
-      {:phoenix_live_reload, "~> 1.2", only: :dev},
-      {:phoenix_live_view, "~> 0.20"},
-      {:heroicons, "~> 0.5"},
-      {:floki, ">= 0.30.0", only: :test},
       {:phoenix_live_dashboard, "~> 0.8.2"},
-      {:esbuild, "~> 0.5", runtime: Mix.env() == :dev},
-      {:tailwind, "~> 0.2", runtime: Mix.env() == :dev},
+      {:phoenix_live_reload, "~> 1.6", only: :dev},
+      {:phoenix_live_view, "~> 0.20"},
+      {:plug_cowboy, "~> 2.5"},
+      {:postgrex, ">= 0.0.0"},
       {:swoosh, "~> 1.3"},
-      {:finch, "~> 0.16"},
+      {:tailwind, "~> 0.2", runtime: Mix.env() == :dev},
       {:telemetry_metrics, "~> 1.0"},
       {:telemetry_poller, "~> 1.0"},
-      {:gettext,
-       git: "https://github.com/ravensiris/gettext", branch: "runtime-gettext", override: true},
-      {:jason, "~> 1.2"},
-      {:plug_cowboy, "~> 2.5"},
 
       # KANTA
       {:kanta, path: "../kanta", override: true},
       {:kanta_deep_l_plugin, "~> 0.1.1"},
-      {:set_locale, "~> 0.2.1"}
+      {:tidewave, "~> 0.5", only: :dev},
+      {:live_debugger, "~> 0.4.0", only: :dev}
     ]
   end
 
