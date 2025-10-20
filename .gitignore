@@ -51,3 +51,8 @@ devenv.local.nix
 /.nix-mix
 /.elixir-tools
 /priv/repo/local_seed.exs
+/.claude
+/.log
+.tool-versions
+CLAUDE.md
+/.expert
